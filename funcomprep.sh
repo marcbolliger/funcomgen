@@ -7,7 +7,7 @@
 
 #Job script to prepare the funcom dataset for use in mlmfc
 # Path to store: /itet-stor/marcbo/net_scratch/funcomprep/trainvaltest/
-OUTPATH=/itet-stor/marcbo/net_scratch/funcomprep/trainvaltest/
+OUTPATH=/itet-stor/marcbo/net_scratch/funcomprep/trainvaltest
 #CONDAENV=pythonenv
 
 # Exit on errors
