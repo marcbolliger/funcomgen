@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --mail-type=ALL
-#SBATCH --mem=32G
+#SBATCH --mem=64G
 #SBATCH --output=/home/marcbo/dataprep/log/%j.out
 #SBATCH --error=/home/marcbo/dataprep/log/%j.err
 
