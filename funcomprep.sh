@@ -41,7 +41,8 @@ echo "SLURM_JOB_ID:    ${SLURM_JOB_ID}"
 
 
 # Run the preparation script
-python3 /home/marcbo/dataprep/funcomgen/datasetcreation.py --split="100000" OUTPATH OUTPATH OUTPATH
+python3 dataprep/funcomgen/datasetcreation.py --split="100000" ${OUTPATH}/train ${OUTPATH}/val ${OUTPATH}/test
+
 
 # Send more noteworthy information to the output log
 echo "Finished at:     $(date)"
