@@ -25,16 +25,16 @@ import time
 import nltk
 from dpu_utils.utils import run_and_debug, RichPath
 
-sys.path.insert(1, '/itet-stor/fremarkus/net_scratch/src/') #path to utils directory in next line
+sys.path.insert(1, '/home/marcbo/dataprep/funcomgen/') #path to utils directory in next line
 from utils import pkldf2jsonl #utils file is from the CodeSearchNet utils directory on Github
 
 def run(arguments):
     split = int(arguments['--split'])
 
     pd.set_option('display.max_colwidth', None) #NEEDED otherwise str typecasting will cut off the function at its preset limit
-    functioncode = pd.read_json('/itet-stor/fremarkus/net_scratch/funcom/funcom_processed/functions.json',orient='index',typ='frame')
+    functioncode = pd.read_json('/itet-stor/marcbo/net_scratch/funcomprep/funcom_processed/functions.json',orient='index',typ='frame')
 
-    filedesc = pd.read_json('/itet-stor/fremarkus/net_scratch/funcom/funcom_processed/comments.json',orient='index',typ='frame')
+    filedesc = pd.read_json('/itet-stor/marcbo/net_scratch/funcomprep/funcom_processed/comments.json',orient='index',typ='frame')
 
     df1test = pd.DataFrame(columns=['code','code_tokens','docstring','docstring_tokens','partition'])
     df1train = pd.DataFrame(columns=['code','code_tokens','docstring','docstring_tokens','partition'])
