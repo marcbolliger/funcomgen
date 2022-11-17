@@ -8,7 +8,7 @@
 #Job script to prepare the funcom dataset for use in mlmfc
 # Path to store: /itet-stor/marcbo/net_scratch/funcomprep/trainvaltest/
 OUTPATH=/itet-stor/marcbo/net_scratch/funcomprep/trainvaltest/
-CONDAENV=/itet-stor/marcbo/codesearch-attacks_itetnas04/envs/pythonenv
+#CONDAENV=pythonenv
 
 # Exit on errors
 set -o errexit
@@ -30,7 +30,7 @@ cd "${TMPDIR}" || exit 1
 # Activate the conda environment
 #source /home/marcbo/.bashrc
 [[ -f /itet-stor/marcbo/net_scratch/conda/bin/conda ]] && eval "$(/itet-stor/marcbo/net_scratch/conda/bin/conda shell.bash hook)"
-conda activate CONDAENV
+conda activate pythonenv
 echo "Conda activated"
 
 # Send some noteworthy information to the output log
